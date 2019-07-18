@@ -1,1 +1,0 @@
-hello new_sc
