@@ -6,13 +6,19 @@ class Node(object):
         self.elem=elem
         self.next=next_
 
-def PrintListReverse(head):
-    stack=[]
-    node=head
-    while node is not None:
-        stack.append(node.elem)
-        node=node.next
-    print(stack[::-1])
+
+class Solution:
+    # 返回从尾部到头部的列表值序列，例如[1,2,3]
+
+    def printListFromTailToHead(self, listNode):
+        stack = []
+        node = listNode
+        while node is not None:
+            stack.append(node.val)
+            node = node.next
+        return stack[::-1]
+
+
 def PintListReverse_DiGui(node):
     if node is not None:
         if node.next is not None:

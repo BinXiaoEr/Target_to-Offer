@@ -1,13 +1,23 @@
-def find(matrix, rows, columns, target):
-    row, column = 0, columns - 1
-    while row < rows and column >= 0:
-        if target < matrix[row][column]:
-            column -= 1
-        elif target > matrix[row][column]:
-            row += 1
-        else:
-            return True
-    return False
+
+
+class Solution:
+    # array 二维列表
+    def Find(self, target, array):
+        # write code here
+        if array==[[]]:
+            return False
+        rows=len(array)#行
+        row=0
+        columns=len(array[1])#列
+        column=columns-1
+        while row < rows and column >= 0:
+            if target < array[row][column]:
+                column -= 1
+            elif target > array[row][column]:
+                row += 1
+            else:
+                return True
+        return False
 
 
 test = [
@@ -16,4 +26,5 @@ test = [
     [4, 7, 10, 13],
     [6, 8, 11, 15]
 ]
-print(find(test,4,4,0))
+a=Solution()
+print(a.Find(4,[[]]))

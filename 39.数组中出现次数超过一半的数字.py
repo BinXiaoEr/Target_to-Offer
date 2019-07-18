@@ -11,7 +11,6 @@ class Solution:
                 counts[nums[i]] += 1
         list1 = sorted(counts.items(), key=lambda x: x[1])
         if list1[-1][-1] > len(nums) // 2:
-
             return (list1[-1][0])
         else:
             return 0
@@ -44,3 +43,6 @@ class Solution:
 
 a=Solution()
 print(a.MoreThanHalfNum_Solution2([1,1,2,2,3]))
+
+#数据库索引、存储过程有什么作用
+#优缺点分别是什么
